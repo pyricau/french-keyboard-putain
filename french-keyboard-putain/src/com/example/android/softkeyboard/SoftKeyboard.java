@@ -51,7 +51,7 @@ public class SoftKeyboard extends InputMethodService
      * a QWERTY keyboard to Chinese), but may not be used for input methods
      * that are primarily intended to be used for on-screen text entry.
      */
-    static final boolean PROCESS_HARD_KEYS = true;
+    static final boolean PROCESS_HARD_KEYS = false;
     
     private KeyboardView mInputView;
     private CandidateView mCandidateView;
@@ -484,6 +484,21 @@ public class SoftKeyboard extends InputMethodService
     // Implementation of KeyboardViewListener
 
     public void onKey(int primaryCode, int[] keyCodes) {
+        
+        switch(primaryCode) {
+        case -69:
+            getCurrentInputConnection().commitText("Putain ! ", 1);
+            return;
+        case -42:
+            getCurrentInputConnection().commitText("Ooh putain ?? ", 1);
+            return;
+        case -13:
+            getCurrentInputConnection().commitText("Putain... ", 1);
+            return;
+        case -60:
+            return;
+        }
+        
         if (isWordSeparator(primaryCode)) {
             // Handle separator
             if (mComposing.length() > 0) {
