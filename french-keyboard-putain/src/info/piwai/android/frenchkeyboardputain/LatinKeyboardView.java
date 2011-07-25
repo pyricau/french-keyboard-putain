@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.example.android.softkeyboard;
+package info.piwai.android.frenchkeyboardputain;
 
 import android.content.Context;
 import android.inputmethodservice.Keyboard;

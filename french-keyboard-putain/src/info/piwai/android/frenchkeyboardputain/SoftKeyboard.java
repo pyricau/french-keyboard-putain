@@ -14,23 +14,22 @@
  * the License.
  */
 
-package com.example.android.softkeyboard;
+package info.piwai.android.frenchkeyboardputain;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.text.method.MetaKeyKeyListener;
-import android.util.Log;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.CompletionInfo;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
-import android.view.inputmethod.InputMethodManager;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Example of writing an input method for a soft keyboard.  This code is
@@ -52,6 +51,13 @@ public class SoftKeyboard extends InputMethodService
      * that are primarily intended to be used for on-screen text entry.
      */
     static final boolean PROCESS_HARD_KEYS = false;
+    
+    private static final int ANGRY_PUTAIN = -69;
+    private static final int SAD_PUTAIN = -13;
+    private static final int AMAZED_PUTAIN = -42;
+    private static final int SOUTH_PUTAIN = -31;
+    
+    private static final List<Integer> PUTAIN_INPUTS = (List<Integer>) Arrays.asList(ANGRY_PUTAIN, SAD_PUTAIN, AMAZED_PUTAIN, SOUTH_PUTAIN);
     
     private KeyboardView mInputView;
     private CandidateView mCandidateView;
@@ -482,20 +488,11 @@ public class SoftKeyboard extends InputMethodService
     }
 
     // Implementation of KeyboardViewListener
-
     public void onKey(int primaryCode, int[] keyCodes) {
         
-        switch(primaryCode) {
-        case -69:
-            getCurrentInputConnection().commitText("Putain ! ", 1);
-            return;
-        case -42:
-            getCurrentInputConnection().commitText("Ooh putain ?? ", 1);
-            return;
-        case -13:
-            getCurrentInputConnection().commitText("Putain... ", 1);
-            return;
-        case -60:
+        if (PUTAIN_INPUTS.contains(primaryCode)) {
+            String output = putainOutput(primaryCode);
+            getCurrentInputConnection().commitText(output, 1);
             return;
         }
         
@@ -530,6 +527,21 @@ public class SoftKeyboard extends InputMethodService
         } else {
             handleCharacter(primaryCode, keyCodes);
         }
+    }
+
+    private String putainOutput(int primaryCode) {
+
+        switch (primaryCode) {
+        case ANGRY_PUTAIN:
+            return "Putain ! ";
+        case AMAZED_PUTAIN:
+            return "Ooh putain ?? ";
+        case SAD_PUTAIN:
+            return "Putain... ";
+        case SOUTH_PUTAIN:
+            return "Putaing con !";
+        }
+        return "";
     }
 
     public void onText(CharSequence text) {

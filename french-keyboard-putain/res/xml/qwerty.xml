@@ -32,7 +32,7 @@
     
    <Row android:rowEdgeFlags="bottom">
         <Key android:codes="-13" android:keyLabel=":-(" android:keyEdgeFlags="left"/>
-        <Key android:codes="-60" android:keyIcon="@drawable/sym_keyboard_shift" android:keyEdgeFlags="right"/>
+        <Key android:codes="-31" android:keyIcon="@drawable/sym_keyboard_france" android:keyEdgeFlags="right"/>
    </Row>
 
 <!--     <Row> -->
