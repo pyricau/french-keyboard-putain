@@ -1,1 +1,19 @@
-French Keyboard, putain!
+A useless, and thefore essential, Android keyboard application, available on the Android Market: https://market.android.com/details?id=info.piwai.android.frenchkeyboardputain
+
+
+Ever seen the great "Learn French in One Word" video (http://www.youtube.com/watch?v=GSeaDQ6sPs0) from The Observing Participant (http://theobservingparticipant.com)?
+
+
+This application is an Android keyboard dedicated to communicating with French people.
+
+
+Since the French language can be boiled down to "one simple word", then you only need a one word keyboard (with a few variations) when sending text messages to French people.
+
+
+To enable it, once installed, go to "Settings" > "Language & keyboard", and check "French in One Word". Then, long press any text input, and select "Input method" > "French in One Word". You now hold the keys to French!
+
+
+This application is Open Source, which means its source code is available for free: https://github.com/pyricau/french-keyboard-putain
+
+
+I have no relation to Michelle Chmielewski (The Observing Participant), it's just that I really enjoyed watching "Learn French in One Word" and decided it was worth an Android application.
