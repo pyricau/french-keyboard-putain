@@ -2,7 +2,7 @@
 <!--
 /* 
 **
-** Copyright 2008, The Android Open Source Project
+** Copyright 2011 Pierre-Yves Ricau
 **
 ** Licensed under the Apache License, Version 2.0 (the "License"); 
 ** you may not use this file except in compliance with the License. 
@@ -18,7 +18,7 @@
 */
 -->
 
-<info.piwai.android.frenchkeyboardputain.LatinKeyboardView
+<android.inputmethodservice.KeyboardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/keyboard"
         android:layout_alignParentBottom="true"

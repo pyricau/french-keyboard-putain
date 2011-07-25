@@ -2,7 +2,7 @@
 <!--
 /*
 **
-** Copyright 2008, The Android Open Source Project
+** Copyright 2011 Pierre-Yves Ricau
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -18,14 +18,6 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Title for Latin keyboard  -->
+    <!-- Title for French in One Word  -->
     <string name="ime_name">French in One Word</string>
-
-    <!-- Symbols that are commonly considered word separators in this language -->
-    <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
-    
-    <!-- Labels on soft keys -->
-    <string name="label_go_key">Go</string>
-    <string name="label_next_key">Next</string>
-    <string name="label_send_key">Send</string>
 </resources>
